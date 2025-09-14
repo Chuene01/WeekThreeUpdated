@@ -32,8 +32,8 @@ length = st.sidebar.radio("Length", ["Short", "Medium", "Detailed"])
 
 sections = st.sidebar.multiselect(
     "Sections to Include",
-    ["Architecture", "API Selection Rationale", "Prompt Methodology", "Performance & Limitations"],
-    default=["Architecture", "API Selection Rationale"]
+    ["API Guide Generator", "Code Comment Explainer", "Troubleshooting Manual", "Installation & Setup Guide", "FAQ / Knowledge Base Entry"],
+    default=["API Guide Generator", "Code Comment Explainer"]
 )
 
 generate_btn = st.sidebar.button("🚀 Generate Documentation")
