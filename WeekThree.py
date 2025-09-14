@@ -5,12 +5,18 @@ import os
 # -------------------------
 # Setup API key (replace with your own or use environment variables)
 # -------------------------
-openai.api_key = "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"
+openai.api_key = "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"
 
 # -------------------------
 # Streamlit UI
 # -------------------------
 st.set_page_config(page_title="TechDoc Generator", page_icon="📄", layout="wide")
+
+# -------------------------
+# Logo at the top
+# -------------------------
+st.image("NS logo.jpg", width=180)  # replace with your file path or URL
+st.sidebar.image("NS logo.jpg", width=120)  # smaller version for sidebar
 
 st.title("📄 Technical Documentation Generator")
 st.write("Generate structured technical documentation using AI.")
@@ -18,7 +24,7 @@ st.write("Generate structured technical documentation using AI.")
 # Sidebar inputs
 st.sidebar.header("⚙️ Configuration")
 
-project_name = st.sidebar.text_input("Project Name", "My AI Tool")
+project_name = st.sidebar.text_input("Project Name", "N.S. AI Tool")
 api_used = st.sidebar.text_input("API / Service", "OpenAI GPT-4")
 audience = st.sidebar.selectbox("Audience", ["Developer", "Manager", "Beginner"])
 tone = st.sidebar.selectbox("Tone", ["Formal", "Concise", "Explanatory"])
@@ -51,7 +57,7 @@ def build_prompt():
 
 def generate_documentation(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are an expert technical writer."},
             {"role": "user", "content": prompt}
