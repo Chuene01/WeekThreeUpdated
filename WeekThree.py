@@ -5,7 +5,7 @@ import os
 # -------------------------
 # Setup API key (replace with your own or use environment variables)
 # -------------------------
-openai.api_key = "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"
+openai.api_key = "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"
 
 # -------------------------
 # Streamlit UI
