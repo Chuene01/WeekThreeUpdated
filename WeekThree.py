@@ -5,7 +5,7 @@ import os
 # -------------------------
 # Setup API key (replace with your own or use environment variables)
 # -------------------------
-openai.api_key = "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"
+api_key = st.secrets["API_KEY"]
 
 # -------------------------
 # Streamlit UI
