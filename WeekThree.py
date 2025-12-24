@@ -3,9 +3,10 @@ import openai
 import os
 
 # -------------------------
-# Setup API key (replace with your own or use environment variables)
+# Setup API key 
 # -------------------------
 api_key = st.secrets["API_KEY"]
+openai.api_key = api_key
 
 # -------------------------
 # Streamlit UI
